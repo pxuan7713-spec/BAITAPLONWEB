@@ -1,0 +1,432 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: black;
+  overflow-x: hidden;
+}
+h2 {
+  padding-bottom: 20px;
+  text-transform: capitalize;
+}
+.background-color {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+
+.icon-hospital {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  background-color: rgba(5, 228, 80, 0.623);
+}
+
+.use-doctor {
+  display: flex;
+  margin-left: auto;
+  flex-direction: column;
+  max-width: 100%;
+  height: auto;
+}
+.avata-doctor img {
+  display: block;
+  max-width: 100%;
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+  justify-content: flex-end;
+}
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 35px 0 0 20px;
+}
+h1 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+/* ---------------Navigation---------------- */
+nav {
+  padding: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  background-color: rgba(5, 228, 80, 0.623);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-transform: capitalize;
+  justify-content: space-between;
+}
+nav ul li a {
+  text-decoration: none;
+  padding: 15px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.3s;
+  border-bottom: 3px solid transparent;
+  color: black;
+}
+nav ul li a svg {
+  margin-bottom: 5px;
+}
+nav ul li a span {
+  font-size: 15px;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  border-bottom: 3px solid #045f13;
+}
+/* --- BẮT ĐẦU: CSS CHO SLIDER --- */
+
+.slider-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  border-top: 2px solid #045f13;
+}
+.slider-wrapper {
+  display: flex;
+  width: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+.slide {
+  flex: 0 0 100%;
+  width: 100%;
+  position: relative;
+  max-height: 450px;
+}
+.slide-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: top;
+  filter: brightness(0.8);
+}
+
+.slide-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  text-align: left;
+  padding: 20px;
+  padding-left: 8rem;
+}
+
+.slide-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+.slide-content h2 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: #f7e8a9;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+  margin-top: 10px;
+}
+.slide-img-sprout {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  opacity: 0.9;
+}
+
+.slide-img-building {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 180px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.slider-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.slider-arrow.prev {
+  left: 15px;
+  border-radius: 50%;
+}
+.slider-arrow.next {
+  right: 15px;
+  border-radius: 50%;
+}
+/* --- KẾT THÚC: CSS CHO SLIDER --- */
+
+main {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 30px 10px 0 10px;
+}
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.page-header {
+  margin-bottom: 30px;
+}
+/* Dashboard Stats */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  box-shadow: 0 5px 20px rgba(5, 228, 80, 0.623);
+  border-radius: 9px;
+}
+.item h2 {
+  padding-top: 30px;
+}
+.stat-card {
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 3px 10px rgba(8, 219, 71, 0.904);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(45, 230, 8, 0.6);
+  background-color: #34cf0d8f;
+}
+.star-card {
+  transition: background-color 0.5s ease;
+}
+.stat-icon img {
+  width: 50px;
+  height: auto;
+}
+.stat-info h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.stat-detail {
+  font-size: 0.9rem;
+}
+/* Recent Patients */
+.table-container {
+  display: block;
+  margin: 30px auto 0 auto;
+  max-width: 1000px;
+  height: auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(5, 228, 80, 0.623);
+  overflow-x: auto;
+  padding-top: 20px;
+  background-color: rgba(5, 228, 80, 0.623);
+}
+.patient-table {
+  width: 100%;
+  align-items: center;
+  border-collapse: collapse;
+}
+
+.patient-table thead th {
+  padding-bottom: 20px;
+  text-align: left;
+  font-weight: 600;
+  color: black;
+  border-bottom: 2px solid #dee6de;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.patient-table tbody tr {
+  border-bottom: 1px solid #fff;
+  transition: background-color 0.5s ease;
+}
+.patient-table tbody tr:hover {
+  background-color: #34cf0d8f;
+}
+.patient-table tbody tr:last-child {
+  border-bottom: none;
+}
+.patient-table td {
+  padding: 16px;
+  vertical-align: middle;
+}
+/* --- Thẻ trạng thái màu sắc --- */
+.status-tag {
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+}
+.status-treated {
+  background-color: #28a745;
+}
+.status-in-treatment {
+  background-color: #007bff;
+}
+.status-waiting {
+  background-color: #ffc107;
+}
+/*---------footer-------*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: rgba(5, 228, 80, 0.623);
+  margin-top: 50px;
+}
+.hospital-info {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+.map-container {
+  flex: 1;
+  min-width: 300px;
+  width: 100%;
+  margin-top: 250px;
+  padding: 20px;
+}
+.map-container iframe {
+  max-width: 100%;
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 8px;
+}
+.logo2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.name-details h1 {
+  padding-bottom: 10px;
+}
+.name-details {
+  margin-top: 40px;
+  padding: 10px 10px 10px 10px;
+}
+.contact-details {
+  padding: 20px 0; /* Bỏ padding hông */
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.contact-details ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.height {
+  border-bottom: 1px solid #045f13;
+  color: #012206;
+}
+.contact-details ul li {
+  padding-bottom: 10px;
+}
+.working-hours {
+  padding: 20px 0;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.system-info {
+  text-align: center;
+  width: 100%;
+  padding: 15px 0;
+  background-color: rgba(5, 228, 80, 0.623);
+  border-top: 1px solid #045f13;
+}
+@media (max-width: 768px) {
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .contact-details,
+  .working-hours {
+    padding-left: 10px;
+  }
+}

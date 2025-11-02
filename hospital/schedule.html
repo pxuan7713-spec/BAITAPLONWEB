@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Lý Lịch Khám Bệnh Viện</title>
+    <link rel="stylesheet" href="css/schedule.css" />
+  </head>
+  <body>
+    <div class="background-color"></div>
+     <header>
+      <div class="icon-hospital">
+        <img src="images/hospital.jpg" alt="Logo" />
+        <div class="logo">
+          <h2>BỆNH VIỆN HỮU NGHỊ</h2>
+          <h1>VIỆT ĐỨC</h1>
+          <h2>VIET DUC HOSPITAL</h2>
+        </div>
+        <div class="use-doctor">
+          <div class="avata-doctor">
+            <img src="images/avatadoctor.jpg" alt="" />
+          </div>
+          <div class="name-doctor">
+            <h2>Bs. Nguyễn Văn B</h2>
+            <p>Bác sĩ điều trị</p>
+          </div>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="index.html" data-page="index"  data-file="index.html">
+              <span>Trang chủ</span>
+          </a>
+        </li>
+        <li>
+          <a href="patients.html" data-page="patients" data-file="patients">
+            <span>Quản lý bệnh nhân</span>
+          </a>
+        </li>
+        <li>
+          <a href="schedule.html" class="active" data-page="schedule" data-file="schedule">
+            <span>Lịch khám</span>
+          </a>
+        </li>
+        <li>
+          <a href="statistics.html" data-page="statistics" data-file="statistics">
+            <span>Thống kê</span>
+          </a>
+        </li>
+        <li>
+          <a href="login.html" data-page="login" data-file="log in">
+            <span>Đăng nhập</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>📋 Quản Lý Lịch Khám Bệnh Viện</h1>
+    <div class="form-container">
+      <div class="container">
+ <h2>➕ Thêm Lịch Hẹn Mới</h2>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="ten_bn">Tên Bệnh Nhân:</label>
+          <input type="text" id="ten_bn" name="ten_bn" required />
+        </div>
+        <div class="form-group">
+          <label for="ngay_kham">Ngày Khám:</label>
+          <input type="date" id="ngay_kham" name="ngay_kham" required />
+        </div>
+        <div class="form-group">
+          <label for="gio_kham">Giờ Khám:</label>
+          <input type="time" id="gio_kham" name="gio_kham" required />
+        </div>
+        <div class="form-group">
+          <label for="chuyen_khoa">Chuyên Khoa:</label>
+          <select id="chuyen_khoa" name="chuyen_khoa" required>
+            <option value="tim_mach">Tim Mạch</option>
+            <option value="noi_tong_hop">Nội Tổng Hợp</option>
+            <option value="ngoai_tong_hop">Ngoại Tổng Hợp</option>
+            <option value="nhi">Nhi</option>
+            <option value="da_lieu">Da Liễu</option>
+          </select>
+        </div>
+        <button class="nut-luu" type="submit">Lưu Lịch Hẹn</button>
+      </form>
+      </div>
+     
+      <div class="doctor-infor">
+        <h3>👨‍⚕️Bác Sĩ Trực hôm nay </h3>
+        <table class="text-table">
+          <thead>
+            <tr>
+              <th>Tên Bác Sĩ</th>
+              <th>Chuyên Khoa</th>
+              <th>Phòng</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bs.Nguyễn Văn B</td>
+              <td>Nội Tổng Hợp</td>
+              <td>P201</td>
+            </tr>
+            <tr>
+              <td>Bs.Lê Thị C</td>
+              <td>Tim Mạch</td>
+              <td>P301</td>
+            </tr>
+            <tr>
+              <td>Bs.Trinh Công T</td>
+              <td>Khoa Thần Kinh</td>
+              <td>P401</td>
+            </tr>
+            <tr>
+              <td>Bs.Lê Văn Q</td>
+               <td>Chấn thương chỉnh hình</td>
+               <td>P502B</td>
+            </tr>
+             <tr>
+              <td>Bs.Nguyễn Văn B</td>
+              <td>Nội Tổng Hợp</td>
+              <td>P201</td>
+            </tr>
+             <tr>
+              <td>Bs.Nguyễn Văn B</td>
+              <td>Nội Tổng Hợp</td>
+              <td>P201</td>
+            </tr>
+             <tr>
+              <td>Bs.Nguyễn Văn B</td>
+              <td>Nội Tổng Hợp</td>
+              <td>P201</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="dashboard">
+      <div class="card">
+       <h4>Tổng bệnh nhân</h4>
+       <p>58</p>
+       </div>
+         <div class="card">
+        <h4>Ca khám hôm nay</h4>
+        <p>12</p>
+     </div>
+         <div class="card">
+         <h4>Đã khám</h4>
+         <p>9</p>
+          </div>
+    <div class="card">
+      <h4>Chờ Khám</h4>
+      <p>30</p>
+    </div>
+ 
+</div>
+
+    </div>
+    <h2>🗓️ Lịch Khám Trong Ngày</h2>
+    <div class="table1">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Tên Bệnh Nhân</th>
+          <th>Ngày Khám</th>
+          <th>Giờ Khám</th>
+          <th>Chuyên Khoa</th>
+          <th>Trạng Thái</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Nguyễn Văn A</td>
+          <td>15/10/2025</td>
+          <td>08:00</td>
+          <td>Nội Tổng Hợp</td>
+          <td>Chờ Khám</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Trần Thị B</td>
+          <td>15/10/2025</td>
+          <td>08:30</td>
+          <td>Tim Mạch</td>
+          <td>Đã Khám</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Trần Thị B</td>
+          <td>15/10/2025</td>
+          <td>08:30</td>
+          <td>Tim Mạch</td>
+          <td>Đã Khám</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Trần Thị B</td>
+          <td>15/10/2025</td>
+          <td>08:30</td>
+          <td>Tim Mạch</td>
+          <td>Đã Khám</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Trần Thị B</td>
+          <td>15/10/2025</td>
+          <td>08:30</td>
+          <td>Tim Mạch</td>
+          <td>Đã Khám</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Trần Thị B</td>
+          <td>15/10/2025</td>
+          <td>08:30</td>
+          <td>Tim Mạch</td>
+          <td>Đã Khám</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    </main>
+    <script src="js/schedule.js"></script>
+  </body>
+</html>

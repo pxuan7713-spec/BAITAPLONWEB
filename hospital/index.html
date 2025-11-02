@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Lý Bệnh Nhân - Bệnh Viện Việt Đức</title>
+    <link rel="stylesheet" href="css/pagehospital.css" />
+  </head>
+  <body>
+    <div class="background-color"></div>
+    <header>
+      <div class="icon-hospital">
+        <img src="images/hospital.jpg" alt="Logo" />
+        <div class="logo">
+          <h2>BỆNH VIỆN HỮU NGHỊ</h2>
+          <h1>VIỆT ĐỨC</h1>
+          <h2>VIET DUC HOSPITAL</h2>
+        </div>
+        <div class="use-doctor">
+          <div class="avata-doctor">
+            <img src="images/avatadoctor.jpg" alt="Bác sĩ Nguyễn Văn B" />
+          </div>
+          <div class="name-doctor">
+            <h2>Bs. Nguyễn Văn B</h2>
+            <p>Bác sĩ điều trị</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="index.html"
+            class="active"
+            data-page="index"
+            data-file="index.html"
+          >
+            <span>Trang chủ</span>
+          </a>
+        </li>
+        <li>
+          <a href="patients.html" data-page="patients" data-file="patients">
+            <span>Quản lý bệnh nhân</span>
+          </a>
+        </li>
+        <li>
+          <a href="schedule.html" data-page="schedule" data-file="schedule">
+            <span>Lịch khám</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="statistics.html"
+            data-page="statistics"
+            data-file="statistics"
+          >
+            <span>Thống kê</span>
+          </a>
+        </li>
+        <li>
+          <a href="login.html" data-page="login" data-file="log in">
+            <span>Đăng nhập </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <section class="slider-container">
+      <div class="slider-wrapper">
+        <div class="slide">
+          <img src="images/gheptang.jpg" alt="ghep tang" class="slide-bg" />
+          <div class="slide-content"></div>
+        </div>
+
+        <div class="slide">
+          <img src="images/trangchu.jpg" alt="Bảo Hiểm" class="slide-bg" />
+          <div class="slide-content"></div>
+        </div>
+
+        <div class="slide">
+          <img
+            src="images/lichkham.jpg"
+            alt="Lịch khám bệnh"
+            class="slide-bg"
+          />
+          <div class="slide-content"></div>
+        </div>
+
+        <div class="slide">
+          <img
+            src="images/khambenh.jpg"
+            alt="Quy trình khám bệnh"
+            class="slide-bg"
+          />
+          <div class="slide-content"></div>
+        </div>
+
+        <div class="slide">
+          <img src="images/lienhe.jpg" alt="Liên hệ" class="slide-bg" />
+          <div class="slide-content"></div>
+        </div>
+      </div>
+      <button class="slider-arrow prev" id="slider-prev">&lt;</button>
+      <button class="slider-arrow next" id="slider-next">&gt;</button>
+    </section>
+
+    <main>
+      <div id="dashboard" class="page active">
+        <div class="page-header">
+          <h2>Tổng quan hệ thống</h2>
+        </div>
+
+        <div class="dashboard-stats">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx4WPMRwUZHH4CIYhmmhdmOPjBP03sSfRshQ&s"
+                alt=""
+              />
+            </div>
+            <div class="stat-info">
+              <h3>Tổng số bệnh nhân</h3>
+              <div class="stat-number">1,247</div>
+              <p class="stat-detail">Đang điều trị: <strong>324</strong></p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <img
+                src="https://media.istockphoto.com/id/1630910512/vector/patient-icon-health-insurance-vector-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=9OdYQvXCNl8dXsLruaDg7gdDv5vBpKNWCGqWSb8e56A="
+                alt=""
+              />
+            </div>
+            <div class="stat-info">
+              <h3>Bệnh nhân mới hôm nay</h3>
+              <div class="stat-number">42</div>
+              <p class="stat-detail">Đã khám: <strong>28</strong></p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <img
+                src="https://t4.ftcdn.net/jpg/15/45/54/35/360_F_1545543559_VFkppwELcqJTi9dHedxmMLN7viuqOQ8O.jpg"
+                alt=""
+              />
+            </div>
+            <div class="stat-info">
+              <h3>Bệnh nhân chờ khám</h3>
+              <div class="stat-number">67</div>
+              <p class="stat-detail">Ưu tiên: <strong>12</strong></p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/003/329/473/non_2x/line-icon-for-hospital-bed-vector.jpg"
+                alt=""
+              />
+            </div>
+            <div class="stat-info">
+              <h3>Giường trống</h3>
+              <div class="stat-number">38</div>
+              <p class="stat-detail">Tổng giường: <strong>500</strong></p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHAkF7yR864N0AFnnVL-eGEMw5wmACEhPiTw&s"
+                alt=""
+              />
+            </div>
+            <div class="stat-info">
+              <h3>Bệnh nhân xuất viện</h3>
+              <div class="stat-number">35</div>
+              <p class="stat-detail">
+                Hoàn thành điều trị: <strong>12</strong>
+              </p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/010/751/352/non_2x/surgeon-icon-design-free-vector.jpg"
+                alt=""
+              />
+            </div>
+            <div class="stat-info">
+              <h3>Số ca phẫu thuật</h3>
+              <div class="stat-number">18</div>
+              <p class="stat-detail">
+                Hoàn thành phẫu thuật: <strong>12</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item"><h2>Thông tin tổng quan bệnh nhân</h2></div>
+        <div class="table-container">
+          <table class="patient-table">
+            <thead>
+              <tr>
+                <th>Họ và tên</th>
+                <th>Chẩn đoán</th>
+                <th>Số phòng</th>
+                <th>Tình trạng</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nguyễn Thị Mai</td>
+                <td>Viêm phổi</td>
+                <td>P.301A</td>
+                <td>
+                  <span class="status-tag status-in-treatment"
+                    >Đang điều trị</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Trần Văn Hùng</td>
+                <td>Sốt siêu vi</td>
+                <td>P.302A</td>
+                <td><span class="status-tag status-treated">Đã khám</span></td>
+              </tr>
+              <tr>
+                <td>Lê Thị Thu Hà</td>
+                <td>Đau dạ dày</td>
+                <td>P.504B</td>
+                <td><span class="status-tag status-waiting">Chờ khám</span></td>
+              </tr>
+              <tr>
+                <td>Phạm Minh Đức</td>
+                <td>Theo dõi huyết áp cao</td>
+                <td>P.502B</td>
+                <td>
+                  <span class="status-tag status-in-treatment"
+                    >Đang điều trị</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Vũ Anh Tuấn</td>
+                <td>Khám sức khỏe tổng quát</td>
+                <td>P.701E</td>
+                <td><span class="status-tag status-treated">Đã khám</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="hospital-info">
+        <div class="logo2">
+          <img src="images/hospital.jpg" alt="Logo Bệnh viện Việt Đức" />
+          <div class="name-details">
+            <h2>BỆNH VIỆN HỮU NGHỊ</h2>
+            <h1>VIỆT ĐỨC</h1>
+            <h2>VIET DUC HOSPITAL</h2>
+          </div>
+        </div>
+
+        <div class="contact-details">
+          <h3>Thông tin liên hệ</h3>
+          <ul>
+            <li>
+              <strong>Địa chỉ:</strong>
+              <span class="height">40 Tràng Thi, Hoàn Kiếm, Hà Nội</span>
+            </li>
+            <li>
+              <strong>Điện thoại:</strong>
+              <span class="height">024 3825 3531</span>
+            </li>
+            <li>
+              <strong>Email:</strong>
+              <span class="height">benhvienvietduc.ifno@gmail.com</span>
+            </li>
+            <li>
+              <strong>Website:</strong>
+              <span class="height">Bệnh viện Hữu Nghị Việt Đức</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="working-hours">
+          <h3>Giờ làm việc chi tiết</h3>
+          <div class="schedule-item">
+            <strong>Thứ 2 - Thứ 6:</strong>
+            <p>
+              Buổi sáng: 7h - 12h<br />
+              Buổi chiều: 13h30 - 16h (mùa đông) hoặc 16h30 (mùa hè)
+            </p>
+          </div>
+          <div class="schedule-item">
+            <strong>Thứ 7:</strong>
+            <p>
+              Bệnh viện làm việc từ 7h đến 16h.<br />
+              <small
+                >Riêng Khoa Khám bệnh theo yêu cầu tại nhà H và Khoa điều trị
+                theo yêu cầu 1C cũng hoạt động trong khung giờ này.</small
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.1217589009993!2d105.84383947430608!3d21.02781358781294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab96812b3a8d%3A0xe1987eeaac4b110!2zNDAgUC4gVHLDoG5nIFRoaSwgSMOgbmcgQsO0bmcsIEhvw6BuIEtp4bq_bSwgSMOgIE7hu5lpLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1758885366663!5m2!1sen!2s"
+        ></iframe>
+      </div>
+
+      <div class="system-info">
+        <p>Hệ thống quản lý bệnh nhân © 2025</p>
+        <p>Phiên bản 1.0.0</p>
+      </div>
+    </footer>
+
+    <script src="js/slider.js"></script>
+  </body>
+</html>

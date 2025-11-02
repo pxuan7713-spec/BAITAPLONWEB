@@ -1,0 +1,253 @@
+/* Reset CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  min-height: 100%;
+  background-color: #f8f9fa;
+}
+
+.settings-page-container {
+  display: flex;
+  width: 1000px;
+  max-width: 95%;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  min-height: 600px;
+  margin: 30px auto;
+}
+.settings-page-container:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-10px);
+}
+.settings-nav-panel {
+  flex: 0 0 300px;
+  background-color: #045335;
+  color: #ffffff;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.logo-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 25px;
+  border: 3px solid #ffffff;
+}
+
+.settings-nav-panel h1 {
+  font-size: 32px;
+  margin-bottom: 35px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.settings-menu {
+  width: 100%;
+}
+
+.settings-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.settings-menu ul li {
+  margin-bottom: 15px;
+}
+
+.settings-menu ul li a {
+  display: block;
+  padding: 12px 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  text-align: left;
+}
+
+.settings-menu ul li a:hover,
+.settings-menu ul li a.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  font-weight: bold;
+}
+
+.settings-content-panel {
+  flex: 1;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+}
+#currentSettingTitle {
+  font-size: 35px;
+  color: #05a568;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.setting-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+.setting-section:last-of-type {
+  border-bottom: none;
+}
+
+.setting-section h3 {
+  font-size: 26px;
+  color: #05a568;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 15px;
+  color: #333333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  font-size: 16px;
+  color: #333333;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+  outline: none;
+  border-color: #05a568;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+.setting-section label:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  margin-right: 12px;
+  width: 21px;
+  height: 21px;
+  background-color: #05a568;
+}
+
+.save-btn-container {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.btn-primary {
+  padding: 15px 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #05a568;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #023d27;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.setting-section.hidden {
+  display: none;
+}
+.forgot-password {
+  display: block;
+  text-align: right;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #05a568;
+  text-decoration: none;
+}
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .settings-page-container {
+    flex-direction: column;
+    width: 95%;
+    min-height: unset;
+    margin-top: 20px;
+  }
+  .settings-nav-panel {
+    flex: unset;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-bottom: 20px;
+  }
+  .settings-nav-panel h1 {
+    margin-bottom: 20px;
+  }
+  .settings-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .settings-menu ul li {
+    margin-bottom: 0;
+  }
+  .settings-menu ul li a {
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+  .settings-content-panel {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .settings-nav-panel h1 {
+    font-size: 29px;
+  }
+  #currentSettingTitle {
+    font-size: 29px;
+  }
+  .setting-section h3 {
+    font-size: 22px;
+  }
+  .btn-primary {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+  .settings-content-panel {
+    padding: 20px;
+  }
+}

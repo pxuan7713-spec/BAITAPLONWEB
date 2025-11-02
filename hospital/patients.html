@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Quản lý bệnh nhân</title>
+
+    <link rel="stylesheet" href="css/patients.css" />
+  </head>
+  <body>
+    <div class="background-color"></div>
+    <header>
+      <div class="icon-hospital">
+        <div class="icon-logo">
+          <img src="images/hospital.jpg" alt="Logo" />
+        </div>
+        <div class="logo">
+          <h2>BỆNH VIỆN HỮU NGHỊ</h2>
+          <h1>VIỆT ĐỨC</h1>
+          <h2>VIET DUC HOSPITAL</h2>
+        </div>
+        <div class="use-doctor">
+          <div class="avata-doctor">
+            <img src="images/avatadoctor.jpg" alt="Ảnh bác sĩ" />
+          </div>
+          <div class="name-doctor">
+            <h2>Bs. Nguyễn Văn B</h2>
+            <p>Bác sĩ điều trị</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html" data-page="index" data-file="index.html">
+            <span>Trang chủ</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="patients.html"
+            class="active"
+            data-page="patients"
+            data-file="patients"
+          >
+            <span>Quản lý bệnh nhân</span>
+          </a>
+        </li>
+        <li>
+          <a href="schedule.html" data-page="schedule" data-file="schedule">
+            <span>Lịch khám</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="statistics.html"
+            data-page="statistics"
+            data-file="statistics"
+          >
+            <span>Thống kê</span>
+          </a>
+        </li>
+        <li>
+          <a href="login.html" data-page="login" data-file="login">
+            <span>Đăng nhập</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="main">
+        <div class="muted">
+          <h1>Quản lý bệnh nhân</h1>
+        </div>
+        <div class="controls">
+          <input
+            id="search"
+            class="input"
+            placeholder="Tìm theo tên, mã, số điện thoại..."
+          />
+          <select id="sortBy" class="input">
+            <option value="createdDesc">Mới nhất</option>
+            <option value="createdAsc">Cũ nhất</option>
+            <option value="nameAsc">Tên A→Z</option>
+            <option value="nameDesc">Tên Z→A</option>
+          </select>
+          <button id="addBtn" class="btn">Thêm bệnh nhân</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card1">
+          <p>Danh sách bệnh nhân</p>
+        </div>
+        <div class="card2">
+          <button id="improtFile" class="btnghost">Nhập CSV</button>
+          <button id="exportBtn" class="btnghost">Xuất CSV</button>
+          <button id="clearAll" class="btnghost">Xóa tất cả</button>
+        </div>
+        <div class="table-cake">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Mã</th>
+                <th>Tên</th>
+                <th>Tuổi</th>
+                <th>Giới tính</th>
+                <th>Điện thoại</th>
+                <th>Ngày tạo</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>B1234</td>
+                <td>Lê Văn Mạnh</td>
+                <td>28</td>
+                <td>Nam</td>
+                <td>023623483</td>
+                <td>22/12/2025</td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="empty" class="adjust">
+            Chưa có bệnh nhân nào. Nhấn "Thêm bệnh nhân" để bắt đầu.
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="main-content-extra">
+      <div class="extra-grid-container">
+        <div class="patient-info-column">
+          <h3 class="widget-title-header">
+            Thông Tin Bệnh Nhân (Góc Từ Thiện)
+          </h3>
+          <div class="article-item">
+            <a href="#" class="article-image">
+              <img
+                src="https://benhvienvietduc.org/wp-content/uploads/2024/07/hoaingoc-1.jpg"
+                alt="Xót xa cô gái nhỏ 9 tuổi"
+              />
+            </a>
+            <div class="article-content">
+              <a href="#" class="article-title"
+                >Xót xa cô gái nhỏ 9 tuổi trải qua 3 lần phẫu thuật u não</a
+              >
+              <span class="article-date">18-07-2024 06:53:08</span>
+              <p>
+                Em Quan Hoài Ngọc (Chiêm Hóa, Tuyên Quang) mới 9 tuổi nhưng đã
+                phải trải qua 3 lần phẫu thuật u não. Anh Quan Văn Chung -bố
+                cháu Ngọc...
+              </p>
+            </div>
+          </div>
+
+          <div class="article-item">
+            <a href="#" class="article-image">
+              <img
+                src="https://benhvienvietduc.org/wp-content/uploads/2023/12/rsz_11.jpg"
+                alt="Chồng mất vì ung thư"
+              />
+            </a>
+            <div class="article-content">
+              <a href="#" class="article-title"
+                >Chồng mất vì ung thư, con trai bị u não, người mẹ nghèo lo sợ
+                sẽ mất con bất cứ lúc nào</a
+              >
+              <span class="article-date">28-12-2023 07:58:32</span>
+              <p>
+                8 năm trước chồng mất vì ung thư, một mình chị Nguyễn Thị Thắm
+                gồng gánh nuôi con trai và mẹ chồng, ngỡ tưởng cuộc sống bình
+                yên qua ngày...
+              </p>
+            </div>
+          </div>
+
+          <div class="article-item">
+            <a href="#" class="article-image">
+              <img
+                src="https://benhvienvietduc.org/wp-content/uploads/2023/12/rsz_1img_0986.jpg"
+                alt="Cháu bé 6 tuổi"
+              />
+            </a>
+            <div class="article-content">
+              <a href="#" class="article-title"
+                >Cháu bé 6 tuổi dân tộc Nùng đau đớn chống chọi với những cơn
+                đau do tai nạn giao thông</a
+              >
+              <span class="article-date">25-10-2023 10:15:00</span>
+              <p>
+                Hoàn cảnh gia đình khó khăn, cháu bé không may gặp tai nạn giao
+                thông nghiêm trọng, đang rất cần sự chung tay giúp đỡ của cộng
+                đồng...
+              </p>
+            </div>
+          </div>
+          <div class="article-item">
+            <a href="#" class="article-image">
+              <img
+                src="https://benhvienvietduc.org/wp-content/uploads/2023/12/rsz_1img_0986.jpg"
+                alt="Cháu bé 6 tuổi"
+              />
+            </a>
+            <div class="article-content">
+              <a href="#" class="article-title"
+                >Cháu bé 6 tuổi dân tộc Nùng đau đớn chống chọi với những cơn
+                đau do tai nạn giao thông</a
+              >
+              <span class="article-date">25-10-2023 10:15:00</span>
+              <p>
+                Hoàn cảnh gia đình khó khăn, cháu bé không may gặp tai nạn giao
+                thông nghiêm trọng, đang rất cần sự chung tay giúp đỡ của cộng
+                đồng...
+              </p>
+            </div>
+          </div>
+          <div class="article-item">
+            <a href="#" class="article-image">
+              <img
+                src="https://benhvienvietduc.org/wp-content/uploads/2023/12/rsz_1img_0986.jpg"
+                alt="Cháu bé 6 tuổi"
+              />
+            </a>
+            <div class="article-content">
+              <a href="#" class="article-title"
+                >Cháu bé 6 tuổi dân tộc Nùng đau đớn chống chọi với những cơn
+                đau do tai nạn giao thông</a
+              >
+              <span class="article-date">25-10-2023 10:15:00</span>
+              <p>
+                Hoàn cảnh gia đình khó khăn, cháu bé không may gặp tai nạn giao
+                thông nghiêm trọng, đang rất cần sự chung tay giúp đỡ của cộng
+                đồng...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-column">
+          <div class="sidebar-widget">
+            <div class="widget-body-padding">
+              <a href="#" class="sidebar-link"
+                >Tư vấn trực tuyến tuyển sinh: Hướng nghiệp và nâng cao chất
+                lượng...</a
+              >
+              <a href="#" class="sidebar-link"
+                >Tập huấn trực tuyến: Quy trình chạy thận nhân tạo tại Bệnh
+                viện...</a
+              >
+            </div>
+          </div>
+
+          <div class="sidebar-widget latest-news-widget">
+            <h3 class="widget-title-header green-header">TIN MỚI NHẤT</h3>
+            <div class="widget-body-padding">
+              <div class="news-item">
+                <a href="#" class="news-thumbnail">
+                  <img
+                    src="https://benhvienvietduc.org/wp-content/uploads/2025/10/6195-xe-16-ch%E1%BB%97-S%C3%A0i-G%C3%B2n_page-0001.jpg"
+                    alt="Tin tức 1"
+                  />
+                </a>
+
+                <a href="#" class="news-title"
+                  >Bệnh viện Hữu nghị Việt Đức mời chào giá dịch vụ vận chuyển
+                  cho các đại biểu trong thời gian tham dự Hội nghị khoa học
+                  thường niên hội Ghép tạng Việt Nam lần thứ X - 2025 tại TP. Hồ
+                  Chí Minh
+                </a>
+              </div>
+
+              <div class="news-item">
+                <a href="#" class="news-thumbnail">
+                  <img
+                    src="https://benhvienvietduc.org/wp-content/uploads/2025/10/6194-v%C3%A9-m%C3%A1y-bay-b%E1%BB%95-sung-S%C3%A0i-G%C3%B2n_page-0001.jpg"
+                    alt="Tin tức 2"
+                  />
+                </a>
+                <a href="#" class="news-title"
+                  >Bệnh viện Hữu nghị Việt Đức mời chào báo giá bổ sung dịch vụ
+                  vé máy bay tham dự Hội nghị khoa học thường niên hội Ghép tạng
+                  Việt Nam lần thứ X - 2025 tại TP. Hồ Chí Minh
+                </a>
+              </div>
+
+              <div class="news-item">
+                <a href="#" class="news-thumbnail">
+                  <img
+                    src="https://benhvienvietduc.org/wp-content/uploads/2025/10/6193-m%C3%A1y-bay-v%C3%A0-kh%C3%A1ch-s%E1%BA%A1n-S%C3%A0i-G%C3%B2n_page-0001.jpg"
+                    alt="Tin tức 3"
+                  />
+                </a>
+                <a href="#" class="news-title"
+                  >Bệnh viện Hữu nghị Việt Đức mời chào báo giá vé máy bay và
+                  khách sạn Hội nghị khoa học thường niên hội Ghép tạng Việt Nam
+                  lần thứ X - 2025 tại TP. Hồ Chí Minh
+                </a>
+              </div>
+              <div class="news-item">
+                <a href="#" class="news-thumbnail">
+                  <img
+                    src="https://benhvienvietduc.org/wp-content/uploads/2025/10/6193-m%C3%A1y-bay-v%C3%A0-kh%C3%A1ch-s%E1%BA%A1n-S%C3%A0i-G%C3%B2n_page-0001.jpg"
+                    alt="Tin tức 3"
+                  />
+                </a>
+                <a href="#" class="news-title"
+                  >Bệnh viện Hữu nghị Việt Đức mời chào báo giá vé máy bay và
+                  khách sạn Hội nghị khoa học thường niên hội Ghép tạng Việt Nam
+                  lần thứ X - 2025 tại TP. Hồ Chí Minh
+                </a>
+              </div>
+              <div class="news-item">
+                <a href="#" class="news-thumbnail">
+                  <img
+                    src="https://benhvienvietduc.org/wp-content/uploads/2025/10/6193-m%C3%A1y-bay-v%C3%A0-kh%C3%A1ch-s%E1%BA%A1n-S%C3%A0i-G%C3%B2n_page-0001.jpg"
+                    alt="Tin tức 3"
+                  />
+                </a>
+                <a href="#" class="news-title"
+                  >Bệnh viện Hữu nghị Việt Đức mời chào báo giá vé máy bay và
+                  khách sạn Hội nghị khoa học thường niên hội Ghép tạng Việt Nam
+                  lần thứ X - 2025 tại TP. Hồ Chí Minh
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="modalRoot" style="display: none"></div>
+    <script src="js/patients.js"></script>
+  </body>
+</html>
