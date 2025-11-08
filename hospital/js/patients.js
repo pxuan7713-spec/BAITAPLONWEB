@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("search");
   const sortBy = document.getElementById("sortBy");
   const exportBtn = document.getElementById("exportBtn");
-  const importBtn = document.getElementById("improtFile");
+  const importBtn = document.getElementById("importFile");
   const clearAllBtn = document.getElementById("clearAll");
   const tableBody = document.querySelector(".table tbody");
   const emptyMessage = document.getElementById("empty");
@@ -310,6 +310,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (id && target.classList.contains("btn-edit")) {
       handleEdit(id);
     }
+  });
+  addBtn.addEventListener("click", () => {
+    showModal();
   });
 
   renderTable(allPatients);
